@@ -1,0 +1,197 @@
+<html>
+    <head>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .container {
+                display: flex;
+                align-items: center;
+                margin-top: 20px;
+            }
+            .text {
+                margin-left: 24px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            .img {
+                max-width: 200px;
+                height: auto;
+            }
+            nav {
+                background-color: red;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                padding: 10px 0;
+            }
+            nav ul {
+                list-style: none;
+                display: flex;
+            }
+            nav ul li {
+                margin-left: 20px;
+            }
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 18px;
+            }
+            .profile-box {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                margin-top: 20px;
+            }
+            .profile-text {
+                margin-right: 24px;
+                font-size: 16px;
+                line-height: 1.5;
+            }
+            .profile-img {
+                max-width: 300px;
+                height: auto;
+            }
+            .footer-box {
+                background-color: red;
+                padding: 50px 0;
+                margin-top: 50px;
+              }
+              
+              .footer {
+                width: 80%;
+                margin: auto;
+                overflow: hidden;
+              }
+              
+              .footer-content {
+                display: flex;
+                flex-wrap: wrap;
+              }
+              
+              .footer-section {
+                flex: 1;
+                padding: 25px;
+              }
+              
+              .footer-section h2 {
+                margin: 0;
+                padding: 5px 0;
+              }
+              
+              .footer-section.about {
+                flex-basis: 40%;
+              }
+              
+              .footer-section.links {
+                flex-basis: 25%;
+              }
+              
+              .footer-section.links ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+              }
+              
+              .footer-section.links a {
+                color: #8f9296;
+                text-decoration: none;
+              }
+              
+              
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img src="https://ceg.annauniv.edu/assets/images/CEG_col.png" alt="Image" class="img">
+            <div class="text">
+                <h1>College of Engineering, Guindy</h1>
+                <p>Anna University, Chennai<br>(AISHE Code: C-25072)</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Dean Desk</a></li>
+                <li><a href="#">Academics / Admissions</a></li>
+                <li><a href="#">Students</a></li>
+                <li><a href="#">Activities</a></li>
+                <li><a href="#">Student Needs</a></li>
+                <li><a href="#">Research</a></li>
+                <li><a href="#">CEG Hostel</a></li>
+                <li><a href="#">Download Forms</a></li>
+                <li><a href="#">Scholarship</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="profile-box">
+            <div class="profile-text">
+                <h2>About Us</h2>
+                <ol type="1">
+                    <li>Profile</li>
+                    <li>History of CEG</li>
+                    <li>Mission & Vision</li>
+                    <li>Administrators</li>
+                </ol>
+            </div>
+            <img src="https://ceg.annauniv.edu/assets/images/about_us/profile.jpg" alt="" class="profile-img">
+        </div>
+        <div>
+            <p>Located in the heart of Chennai city, the sprawling campus of the College of Engineering, Guindy (CEG) with cutting edge infrastructure has been the foundation for many a successful engineer, scholar, and leader. The University offers 10 UG(Regular), 2 UG(Tamil Medium), 4 UG(Self-Supporting), 3 UG(Part time), 34 PG(Regular), 20 PG(Self-supporting) and 3 PG(Part time) courses. CEG has 17 Departments and 17 Research Centres where research programs are offered. With close ties with industry, excellent research practices and multiple extra-curricular options, the institution advances the progression of the student's quest for knowledge. The faculty along with the excellent student population makes the campus one of the best places to study in the nation.
+        </p>
+        </div>
+        <div class="footer-box">
+            <footer class="footer">
+              <div class="footer-content">
+                <div class="footer-section about">
+                  <h1 class="logo-text"><span>CEG</span> COE</h1>
+                  <p>
+                    The College of Engineering, Guindy (CEG) is a public engineering college in Chennai, India. Founded in 1794, it is the oldest technical institution in the country.
+                  </p>
+                  <div class="contact">
+                    <span><i class="fas fa-phone"></i> &nbsp; 044-22352341</span>
+                    <span><i class="fas fa-envelope"></i> &nbsp; ceg@annauniv.edu</span>
+                  </div>
+                  <div class="socials">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                  </div>
+                </div>
+                <div class="footer-section links">
+                  <h2>Quick Links</h2>
+                  <br>
+                  <ul>
+                    <li><a href="#">Academics</a></li>
+                    <li><a href="#">Admissions (UG/PG)</a></li>
+                    <li><a href="#">Research</a></li>
+                    <li><a href="#">Library</a></li>
+                    <li><a href="#">Alumni</a></li>
+                  </ul>
+                </div>
+                <div class="footer-section contact-form">
+                  <h2>Contact Us</h2>
+                  <br>
+                  <form action="#" method="post">
+                    <input type="email" name="email" class="text-input contact-input" placeholder="Your email address...">
+                    <textarea rows="4" name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
+                    <button type="submit" class="btn btn-big contact-btn">
+                      <i class="fas fa-envelope"></i>
+                      Send
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="footer-bottom">
+                <p>CEG COE &copy; 2023 | Designed by Web team @ CEG</p>
+              </div>
+            </footer>
+          </div>
+          
+            </body>
+    </html>
