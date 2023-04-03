@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML Validation Form</title>
+    <script>
+        function validate(){
+          var a = document.myform.name.value;
+            if(a=="")
+            {
+              alert("Please Enter your name")
+              document.myform.name.focus();
+              return false;
+            }
+            if(!isNaN(a))
+            {
+              alert("please Enter only characters");
+              document.myform.name.select();
+              return false;
+            }
+            var ichar="!`@#$%^&*()+=-[]\\\';,./{}|0:<>?~_";
+            for(var i=0;i<a.length;i++)
+            {
+                if(ichar.indexOf(a.charAt(i))!=-1)
+                {
+                    alert("please Enter only characters");
+                    document.myform.name.focus();
+                    return false;
+                }
+            }    
+          var d = document.myform.mail.value;
+            if(d == "")
+            {
+                alert("please, Enter your mail id");
+                document.myform.mail.focus();
+                return false;
+            }
+            var atposition = d.indexOf("@");
+            var dotposition = d.lastIndexOf(".");
+            if(atposition<1 || dotposition<atposition+2 || dotposition+2>=d.length)
+                {
+                    alert("please enter valid mail");
+                    return false;
+                }
+                var m = document.myform.mobile.value;
+            
+            if(m =="")
+            {
+                alert("please, Enter your moblie number");
+                document.myform.mobile.focus();
+                return false;
+            }
+            else if(m.length<10 || m.length>10)
+            {
+                alert("please enter only 10 digits");
+                document.myform.mobile.focus();
+                return false;
+            }
+    
+            var p = document.myform.pass.value;
+            if(p == "")
+            {
+                alert("please, Enter your password");
+                document.myform.pass.focus();
+                return false;
+            }
+            var cp = document.myform.cpass.value;
+            if(cp == "")
+            {
+                alert("please,  re-write the password");
+                document.myform.cpass.focus();
+                return false;
+            }
+            if(p != cp)
+            {
+                alert("Password not match");
+                document.myform.cpass.focus();
+                return false;
+            }
+
+            var dob = document.myform.dob.value;
+            if(dob == "")
+            {
+                alert("please, Enter your date of birth");
+                document.myform.dob.focus();
+                return false;
+            }
+
+            var add = document.myform.address.value;
+            if(add == "")
+            {
+                alert("please, Enter your address");
+                document.myform.address.focus();
+                return false;
+            }
+           
+            var rb = document.myform.gender;
+            var status =0;
+            for(var i=0;i<rb.length;i++)
+            {
+                if(rb[i].checked==true){
+                    status=1;
+                }
+            }
+            if(status==0)
+            {
+                alert("please select your gender");
+                return false;
+            }
+
+            var nation = document.myform.nation;
+            if(nation.selectedIndex==0 || nation=="Enter your nationality")
+            {
+                alert("please select your nationality");
+                document.myform.nation.focus();
+                return false;
+            }
+
+            var couse = document.myform.course;
+            if(couse.selectedIndex==0 || couse=="Enter your course")
+            {
+                alert("please select your course");
+                document.myform.course.focus();
+                return false;
+            }
+
+           
+
+            var dept = document.myform.dpt;
+            if(dept.selectedIndex==0 || dept=="Enter your department")
+            {
+                alert("please select your depatment");
+                document.myform.dept.focus();
+                return false;
+            }
+
+            return true;
+        } 
+        
+    </script>
+   
+    <style>
+        html, body {
+            display: flex;
+            justify-content: center;
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 15px;
+            }
+        input{
+          
+            display:table-cell;
+            margin-bottom: 10px;
+            
+        }
+        label {
+            padding-right: 10px;
+        }
+        div{
+            display: table-row;
+            color:white
+        }
+        .container{
+
+            margin: auto;
+            width:50%;
+            border: 3px solid black;
+            padding : 60px ;
+
+            background-color: #cccc;
+            background-image: radial-gradient(black,white);
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1><u>Registration Form</u></h1>
+        <form action="action.html" name="myform" onsubmit="return validate()">
+            <div>
+                <label for="name">Name</label> 
+                <br>  
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+                <br><br>
+            </div>
+            <div>
+                <label for="mail">Email ID</label>
+                <br>
+                <input type="email" id="mail" name="mail" placeholder="Enter your mail-id">
+                <br><br>
+            </div>
+            <div>
+                <label for="mobile">Mobile Number</label>
+                <input type="number" id="mobile" name="mobile" placeholder="Enter your mobile no">
+                <br><br>
+            </div>
+            <div><label for="pass">Password</label>
+                <input type="password" id="pass" name="pass" placeholder="Enter your Password">
+                <br><br>
+            </div>
+            <div>
+                <label for="cpass">Confirm Password</label>
+                <input type="password" id="cpass" name="cpass" placeholder="Re-enter your Password">
+                <br><br>
+            </div>
+            <div>
+                <label for="dob">Date of Birth</label>
+                <br>
+                <input type="date" id="dob" name="dob">
+                <br><br>
+            </div>
+            <div>
+                <label for="add">Address</label><br>
+                <textarea name="address" placeholder="Enter your address" id="address" cols="30" rows="10" >     
+                </textarea><br><br><br>
+            </div>
+            <div>
+                <label for="gender">Gender: </label><br>
+                <input type="radio" id="gender" name="gender">
+                <label for="Male">Male</label>
+                <input type="radio" id="gender" name="gender">
+                <label for="Female">Female</label>
+                <input type="radio" id="gender" name="gender">
+                <label for="Others">Others</label>
+                <br><br>
+            </div>
+            <div>
+                <label for="nation">Nationality</label>
+                <br>
+                <select type="text" name="nation" id="nation">
+                    <option value="">Enter your nationality</option>
+                    <option value="Indian">India</option>
+                    <option value="America">America</option>
+                    <option value="South America">South America</option>
+                    <option value="UAE">United Arab Emirates</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Japan">Japan</option>
+                </select>
+                <br><br>
+            </div>
+            <div>
+                <label for="course">Course</label>
+                <br>
+                <select type="text" name="course" id="course">
+                    <option value="">Enter your course</option>
+                    <option value="Wt">Web Technology</option>
+                    <option value="Java">Object oriented Programming</option>
+                    <option value="OS">Operating System</option>
+                </select><br><br>
+            </div>
+            <div>
+                <label for="dpt">Department</label>
+                <br>
+                <select type="text" name="dpt" id="dpt">
+                    <option value="Enter your Dpt">Enter your department</option>
+                    <option value="AI">Artifical Intelligence</option>
+                    <option value="ECE">ECE</option>
+                    <option value="EEE">EEE</option>
+                    <option value="FT">Food Technolgy</option>
+                    <option value="Mech">Mechnical</option>
+                    <option value="Mechtron">Mechtronics</option>
+                </select>
+            <br><br>
+            </div>
+            <div>
+                <input type="submit">
+            </div>        
+        </form>
+    </div>
+</body>
+</html>
