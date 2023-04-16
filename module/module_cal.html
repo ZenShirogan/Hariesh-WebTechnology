@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module_Calculator</title>
+    <style>
+       /* Center the form horizontally and vertically */
+.form-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Add padding and border to the form */
+form {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style the label */
+label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Style the radio buttons */
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Style the submit button */
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+body {
+    background-color: #f5f5f5;
+  }
+  
+  /* Style the header */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  /* Add some margin to the form */
+  form {
+    margin-top: 20px;
+  }
+  
+  /* Style the input fields */
+  input[type="number"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the radio button container */
+  .radio-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the radio buttons */
+  .radio-container input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  .radio-container label {
+    margin-right: 10px;
+  }
+  
+  /* Style the submit button */
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  
+  /* Style error message */
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  /* Add a gradient background to the body */
+body {
+    background: linear-gradient(to bottom, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+  }
+  
+  /* Style the header */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  /* Add some margin to the form */
+  form {
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    padding: 20px;
+  }
+  
+  /* Style the input fields */
+  input[type="number"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the radio button container */
+  .radio-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the radio buttons */
+  .radio-container input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  .radio-container label {
+    margin-right: 10px;
+  }
+  
+  /* Style the submit button */
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #3e8e41;
+    transform: translateY(-3px);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  }
+  
+  /* Style error message */
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+    </style>
+</head>
+<body class="content">
+    <form class="form-center"action="http://localhost:2046/cal" method="get"> 
+        Enter the number 1 <input type="number" name="num1" ><br><br>
+        Enter the number 2 <input type="number" name="num2"><br><br>
+        <label for="operator">Operator:</label>
+        <br>
+        <span>
+        +<input type="radio"id="operator" name="operator" value="+"><br>
+        -<input type="radio"id="operator" name="operator" value="-"><br>
+        *<input type="radio"id="operator" name="operator" value="*"><br>
+        /<input type="radio"id="operator" name="operator" value="/"><br>
+        %<input type="radio"id="operator" name="operator" value="%"><br>
+        </span>
+       
+        <br> <button type="sumbit">Result</button>
+    </form>
+</body>
+</html>
+
